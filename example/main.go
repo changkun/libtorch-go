@@ -1,14 +1,7 @@
-# libtorch-go
+// Copyright 2024 Changkun Ou <changkun.de>. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
 
-libtorch Go wrapper for model inference
-
-## Dependencies
-
-- [libtorch](https://download.pytorch.org/libtorch/cpu/libtorch-macos-arm64-2.4.0.zip)
-
-## Usage
-
-```go
 package main
 
 import (
@@ -27,6 +20,3 @@ func main() {
 	// Output: [13.449158 13.449158]
 	fmt.Println(m.Predict(x, nsamples, nfeatures))
 }
-```
-
-For more details, see [example](./example) folder.
