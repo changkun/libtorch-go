@@ -34,9 +34,7 @@ func (m *Model) Predict(x []float32, nsamples, nfeatures int) []float32 {
 
 	n := int(outputSize)
 	out := make([]float32, n)
-	oslice := (*[1 << 30]float32)(unsafe.Pointer(output))[:n:n]
-	copy(out, oslice)
+	copy(out, unsafe.Slice((*float32)(unsafe.Pointer(output)), n))
 	C.free_memory(output)
-
 	return out
 }

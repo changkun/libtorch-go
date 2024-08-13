@@ -1,3 +1,3 @@
 module changkun.de/x/libtorch-go
 
-go 1.22
+go 1.23
